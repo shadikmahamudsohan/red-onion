@@ -1,9 +1,9 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import CustomLink from '../../../shared/CustomLink/CustomLink';
 
 const FoodSection = () => {
-
+    const navigate = useNavigate();
     return (
         <div>
             <div className='text-center my-5'>
@@ -12,7 +12,7 @@ const FoodSection = () => {
                 <CustomLink className='py-2 px-3 fw-bold text-decoration-none' to='/home/dinner'>Dinner</CustomLink>
             </div>
             <Outlet />
-            <button className='my-5 d-block mx-auto px-5 btn btn-secondary'>Checkout You Food</button>
+            <button onClick={() => navigate('/cart')} className='my-5 d-block mx-auto px-5 btn btn-secondary'>Checkout You Food</button>
         </div>
     );
 };
