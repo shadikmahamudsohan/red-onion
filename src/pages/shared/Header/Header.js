@@ -5,10 +5,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase/firebase.init';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../images/logo2.png';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const navigate = useNavigate();
+    const handleLogout = () => {
+        signOut(auth);
+    };
     return (
         <>
             <Navbar bg="light" variant="light" sticky="top">
@@ -20,7 +24,7 @@ const Header = () => {
                         <Nav.Link as={Link} to='/cart'>Cart</Nav.Link>
                         {
                             user ?
-                                <button className='btn btn-warning rounded-pill
+                                <button onClick={handleLogout} className='btn btn-warning rounded-pill
                                     px-4'>LogOut</button>
                                 : (<>
                                     <Nav.Link as={Link} to='/login'>Login</Nav.Link>
