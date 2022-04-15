@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase/firebase.init';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../../images/logo2.png';
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -12,7 +13,9 @@ const Header = () => {
         <>
             <Navbar bg="light" variant="light" sticky="top">
                 <Container>
-                    <Navbar.Brand as={Link} to='/home'>Navbar</Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/home'>
+                        <img src={logo} width='150' alt="" />
+                    </Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to='/cart'>Cart</Nav.Link>
                         {

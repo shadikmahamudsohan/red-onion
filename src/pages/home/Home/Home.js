@@ -1,14 +1,14 @@
 import React from 'react';
+import FoodSection from './FoodSection/FoodSection';
+import HeroSection from './HeroSection/HeroSection';
+import WhyChooseUs from './WhyChooseUs/WhyChooseUs';
 
 const Home = () => {
     return (
         <div>
-            <h1>Best food waiting for you belly</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione provident sunt accusamus reiciendis excepturi vitae nemo mollitia nam, corporis aspernatur nihil natus ipsam unde odio repudiandae asperiores iure ex ullam!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione provident sunt accusamus reiciendis excepturi vitae nemo mollitia nam, corporis aspernatur nihil natus ipsam unde odio repudiandae asperiores iure ex ullam!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione provident sunt accusamus reiciendis excepturi vitae nemo mollitia nam, corporis aspernatur nihil natus ipsam unde odio repudiandae asperiores iure ex ullam!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione provident sunt accusamus reiciendis excepturi vitae nemo mollitia nam, corporis aspernatur nihil natus ipsam unde odio repudiandae asperiores iure ex ullam!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione provident sunt accusamus reiciendis excepturi vitae nemo mollitia nam, corporis aspernatur nihil natus ipsam unde odio repudiandae asperiores iure ex ullam!</p>
+            <HeroSection />
+            <FoodSection />
+            <WhyChooseUs />
         </div>
     );
 };

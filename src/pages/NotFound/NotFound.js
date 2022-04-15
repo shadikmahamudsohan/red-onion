@@ -11,7 +11,7 @@ const NotFound = () => {
             <h1 className='text-danger my-3 text-center '>
                 404
             </h1>
-            <button onClick={() => navigate('/home')} className='btn btn-warning'>
+            <button onClick={() => navigate('/home')} className='btn btn-warning d-block mx-auto py-3 px-5 rounded-pill'>
                 Go Back To Home
             </button>
         </div>
